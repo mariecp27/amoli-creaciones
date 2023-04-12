@@ -1,0 +1,29 @@
+/* Paleta de colores y fuente seleccionadas */
+$a-yellow: #E0B872;
+$a-green: #A4E8DB;
+$a-purple: #8A2A5A;
+$a-orange: #BE594F;
+$a-blue: #6095E8;
+$a-text: 'Poppins', sans-serif;
+$a-title: 'Alkatra', cursive;
+
+/* Normalización de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Permite controlar el tamaño de fuente en rem: 1rem = 10px y fondo de la página */
+html {
+    font-size: 62.5%;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: $a-text;
+    overflow-x: hidden;
+}
+
+/* Transiciones */
+@mixin a-transition {
+    transition: all 0.3s;
+}

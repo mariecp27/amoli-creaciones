@@ -1,0 +1,122 @@
+.navbar {
+    background-image: linear-gradient(to bottom, $a-blue, transparent);
+    font-family: $a-title;
+    font-size: 1.3rem;
+
+    .navbar__logo {
+        width: 40vw;
+        margin: 10px;
+        @include a-transition;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 5px;
+        @include a-transition;
+
+        svg {
+            color: $a-purple;
+            font-size: 5rem;
+            @include a-transition;
+        }
+
+        &:hover {
+            background-color: $a-purple;
+
+            svg {
+                color: #ffffffff;
+            }
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.offcanvas-start {
+    background-color: $a-purple;
+    color: #ffffffff;
+    padding: 15px;
+    font-size: 2rem;
+    font-family: $a-text;
+
+    .btn-close-white {
+        opacity: 1;
+        font-size: 2rem;
+    }
+
+    .offcanvas-title {
+        font-size: 3rem;
+        font-family: $a-title;
+    }
+
+    .offcanvas-body a {
+        padding: 10px;
+        font-weight: 300;
+    }
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 576px) {
+    .navbar {
+    
+        .navbar__logo {
+            width: 30vw;
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+    .navbar {
+    
+        .navbar__logo {
+            width: 20vw;
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .navbar {
+    
+        .navbar__logo {
+            width: 15vw;
+        }
+    }
+
+    .offcanvas-start {
+        padding: 0;
+
+        .offcanvas-body {
+            margin: 10px;
+            padding: 0;
+
+            a {
+                color: $a-purple;
+                font-weight: 400;
+
+                &:hover {
+                    color: $a-orange;
+                }
+            }
+        }
+    }
+}
+
+/*===== ESTILOS XL =====*/
+@media only screen and (min-width: 1200px) {
+    .navbar {
+    
+        .navbar__logo {
+            width: 10vw;
+        }
+    }
+}
