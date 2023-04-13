@@ -1,0 +1,21 @@
+.description {
+    background-color: $a-blue;
+    color: #ffffffff;
+    font-family: $a-text;
+    text-align: center;
+    padding: 20px;
+
+    .description__body {
+        font-size: 1.5rem;
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px) {
+    .description {
+        .description__body {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

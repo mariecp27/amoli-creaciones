@@ -2,12 +2,18 @@ import { BrowserRouter } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/style.scss";
 import NavBar from './components/NavBar/NavBar';
+import Banner from './components/Banner/Banner';
+import Description from './components/Description/Description';
+import Who from './components/Who/Who';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <NavBar />
+        <Banner />
+        <Description />
+        <Who />
       </BrowserRouter>
     </div>
   );

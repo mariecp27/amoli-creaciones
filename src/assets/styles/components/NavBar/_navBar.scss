@@ -2,6 +2,8 @@
     background-image: linear-gradient(to bottom, $a-blue, transparent);
     font-family: $a-title;
     font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
 
     .navbar__logo {
         width: 40vw;

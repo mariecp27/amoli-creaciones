@@ -27,3 +27,27 @@ html {
 @mixin a-transition {
     transition: all 0.3s;
 }
+
+/* Botones */
+.a-button {
+    color: #ffffffff;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: $a-title;
+    padding: 10px 20px;
+    background: $a-purple;
+    border: 2px solid $a-yellow;
+    border-radius: 30px;
+    margin: 20px auto;
+    margin-bottom: 0;
+    width:fit-content;
+    @include a-transition;
+
+
+    &:hover {
+        background: $a-orange;
+        color: #ffffffff;
+    }
+}
+
