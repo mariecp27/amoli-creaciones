@@ -2,7 +2,9 @@ import React from 'react'
 
 const Who = () => {
   return (
-    <div className='who'>
+    <div
+      className='who'
+      id='who-are-we'>
       <div className='who__body'>
         <h3>¿Quiénes somos?</h3>
         <p>

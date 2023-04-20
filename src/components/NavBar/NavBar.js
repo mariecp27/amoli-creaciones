@@ -13,9 +13,10 @@ const ANavBar = () => {
         <Navbar
           key={expand}
           expand={expand}
-          className='mb-3 navbar'>
+          className='mb-3 navbar'
+          id="home">
           <Container fluid>
-            <Link>
+            <Link to="#home">
               <img
                 src={process.env.PUBLIC_URL + '/assets/images/full-logo.png'}
                 alt='Logo'
@@ -38,10 +39,10 @@ const ANavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className='justify-content-end flex-grow-1 pe-3'>
-                  <Nav.Link href='#'>Inicio</Nav.Link>
+                  <Nav.Link href='#home'>Inicio</Nav.Link>
                   <Nav.Link href='#'>Productos</Nav.Link>
-                  <Nav.Link href='#'>¿Quiénes somos?</Nav.Link>
-                  <Nav.Link href='#'>Preguntas frecuentes</Nav.Link>
+                  <Nav.Link href='#who-are-we'>¿Quiénes somos?</Nav.Link>
+                  <Nav.Link href='#faq'>Preguntas frecuentes</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
