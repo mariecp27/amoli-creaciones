@@ -14,11 +14,11 @@ const Who = () => {
         libero. Nunc tempor lectus et vestibulum porta. Ut in elit rutrum,
         tristique risus vel, ultrices sem.
       </p>
-      <img
+      {/* <img
         src={process.env.PUBLIC_URL + '/assets/images/form.png'}
         alt='Form'
         className=''
-      />
+      /> */}
     </div>
   )
 }

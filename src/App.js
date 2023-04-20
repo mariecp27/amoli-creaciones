@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar'
 import Banner from './components/Banner/Banner'
 import Description from './components/Description/Description'
 import Who from './components/Who/Who'
+import FAQ from './components/FAQ/FAQ'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Banner />
         <Description />
         <Who />
+        <FAQ />
       </BrowserRouter>
     </div>
   )
