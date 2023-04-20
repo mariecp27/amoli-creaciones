@@ -1,71 +1,71 @@
 .who {
-    background-color: $a-purple;
-    color: #ffffffff;
-    font-family: $a-text;
-    font-size: 1.5rem;
-    padding: 20px;
-    text-align: justify;
+  background-color: $a-purple;
+  color: #ffffffff;
+  font-family: $a-text;
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: justify;
+  position: relative;
+  overflow: hidden;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-family: $a-title;
+    color: $a-blue;
+    font-size: 2rem;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+  }
+
+  p {
     position: relative;
-    overflow: hidden;
-    min-height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    z-index: 1;
+  }
 
-    h3 {
-        font-family: $a-title;
-        color: $a-blue;
-        font-size: 2rem;
-        text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-        margin: 20px 0;
-    }
-
-    p {
-        position: relative;
-        z-index: 1;
-    }
-
-    img {
-        position: absolute;
-        z-index: 0;
-        bottom: 0;
-        right: -10%;
-    }
+  img {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: -10%;
+  }
 }
 
 /*===== ESTILOS MOBILE (OTHERS) - SM =====*/
 @media only screen and (min-width: 576px) {
-    .who img {
-        bottom: -10%;
-    }
+  .who img {
+    bottom: -10%;
+  }
 }
 
 /*===== ESTILOS TABLET - MD =====*/
 @media only screen and (min-width: 768px) {
-    .who img {
-        width: 35%;
-        right: 0;
-    }
+  .who img {
+    width: 35%;
+    right: 0;
+  }
 }
-
 
 /*===== ESTILOS LG =====*/
 @media only screen and (min-width: 992px) {
-    .who {
-        h3, p {
-            width: 80%;
-        }
-
-        img {
-            width: 25%;
-        }
+  .who {
+    h3,
+    p {
+      width: 80%;
     }
+
+    img {
+      width: 25%;
+    }
+  }
 }
 
 /*===== ESTILOS XL =====*/
 @media only screen and (min-width: 1200px) {
-    .who img {
-        width: 20%;
-    }
+  .who img {
+    width: 20%;
+  }
 }
