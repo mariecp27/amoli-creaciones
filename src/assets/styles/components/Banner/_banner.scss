@@ -2,12 +2,12 @@
   width: 100vw;
   height: 50vh;
   margin-top: -60px;
-  background-image: url('../../../images/banner.png');
+  background-image: url('../../../images/banner_1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
-  animation: change 15s infinite alternate linear;
+  animation: change 10s infinite alternate linear;
 
   .banner__waves {
     position: absolute;
@@ -44,19 +44,15 @@
 
 @keyframes change {
   0%,
-  20% {
-    background-image: url('../../../images/banner.png');
+  30% {
+    background-image: url('../../../images/banner_1.png');
   }
-  25%,
-  45% {
+  35%,
+  65% {
     background-image: url('../../../images/banner_2.png');
   }
-  50%,
-  70% {
-    background-image: url('../../../images/banner_3.png');
-  }
-  75%,
+  70%,
   100% {
-    background-image: url('../../../images/banner_4.png');
+    background-image: url('../../../images/banner_3.png');
   }
 }
