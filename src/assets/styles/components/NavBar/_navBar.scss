@@ -62,6 +62,10 @@
   .offcanvas-body a {
     padding: 10px;
     font-weight: 300;
+
+    &:hover {
+      color: $a-orange;
+    }
   }
 }
 
@@ -100,7 +104,7 @@
 
       a {
         color: $a-purple;
-        font-weight: 400;
+        font-weight: 500;
 
         &:hover {
           color: $a-orange;
