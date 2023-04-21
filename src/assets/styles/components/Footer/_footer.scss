@@ -1,0 +1,48 @@
+.footer {
+  background-color: $a-yellow;
+  text-align: center;
+
+  .footer__first-section {
+    h3 {
+      font-family: $a-title;
+      color: #ffffffff;
+      font-size: 2rem;
+      text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      color: $a-purple;
+      font-family: $a-text;
+      font-size: 1.5rem;
+    }
+
+    a {
+      color: $a-purple;
+      font-size: 4rem;
+      @include a-transition;
+
+      &:hover {
+        color: $a-orange;
+      }
+    }
+  }
+
+  .footer__last-section {
+    background-color: $a-purple;
+    color: #ffffffff;
+    font-family: $a-title;
+    padding: 10px;
+
+    h4 {
+      font-weight: 100;
+    }
+  }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px) {
+  .footer .footer__first-section {
+    display: flex;
+    justify-content: space-around;
+  }
+}
