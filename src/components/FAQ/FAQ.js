@@ -1,4 +1,7 @@
 import React from 'react'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLocationDot,
@@ -12,13 +15,22 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 const FAQ = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true
+    })
+  }, [])
+
   return (
     <div
       className='faq'
       id='faq'>
       <div className='faq__body'>
-        <h3>Preguntas frecuentes</h3>
-        <section className='faq__location'>
+        <h3 data-aos='fade-up'>Preguntas frecuentes</h3>
+        <section
+          className='faq__location'
+          data-aos='fade-up'>
           <h4>¿Dónde estámos?</h4>
           <div>
             <div className='faq_icon'>
@@ -32,7 +44,9 @@ const FAQ = () => {
             </p>
           </div>
         </section>
-        <section className='faq__how-to-purchase'>
+        <section
+          className='faq__how-to-purchase'
+          data-aos='fade-up'>
           <h4>¿Cómo comprar?</h4>
           <div>
             <div className='faq_icon'>
@@ -46,7 +60,9 @@ const FAQ = () => {
             </p>
           </div>
         </section>
-        <section className='faq__purchase-methods'>
+        <section
+          className='faq__purchase-methods'
+          data-aos='fade-up'>
           <h4>Medios de pago</h4>
           <div>
             <div className='faq_icon'>

@@ -1,11 +1,23 @@
 import React from 'react'
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Who = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true
+    })
+  }, [])
+
   return (
     <div
       className='who'
       id='who-are-we'>
-      <div className='who__body'>
+      <div
+        className='who__body'
+        data-aos='fade-up'>
         <h3>¿Quiénes somos?</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue
@@ -17,11 +29,6 @@ const Who = () => {
           libero. Nunc tempor lectus et vestibulum porta. Ut in elit rutrum,
           tristique risus vel, ultrices sem.
         </p>
-        {/* <img
-          src={process.env.PUBLIC_URL + '/assets/images/form.png'}
-          alt='Form'
-          className=''
-        /> */}
       </div>
     </div>
   )

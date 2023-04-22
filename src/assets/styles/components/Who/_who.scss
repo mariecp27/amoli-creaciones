@@ -31,20 +31,6 @@
       position: relative;
       z-index: 1;
     }
-
-    img {
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      right: -10%;
-    }
-  }
-}
-
-/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
-@media only screen and (min-width: 576px) {
-  .who img {
-    bottom: -10%;
   }
 }
 
@@ -52,11 +38,6 @@
 @media only screen and (min-width: 768px) {
   .who .who__body {
     width: 80%;
-
-    img {
-      width: 35%;
-      right: 0;
-    }
   }
 }
 
@@ -64,10 +45,6 @@
 @media only screen and (min-width: 992px) {
   .who .who__body {
     width: 70%;
-
-    img {
-      width: 25%;
-    }
   }
 }
 
@@ -75,9 +52,5 @@
 @media only screen and (min-width: 1200px) {
   .who .who__body {
     width: 60%;
-
-    img {
-      width: 20%;
-    }
   }
 }
