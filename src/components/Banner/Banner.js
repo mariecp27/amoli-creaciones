@@ -2,7 +2,9 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <div className='banner'>
+    <div
+      className='banner'
+      id='home'>
       <img
         src={process.env.PUBLIC_URL + '/assets/images/background.svg'}
         alt='Waves'

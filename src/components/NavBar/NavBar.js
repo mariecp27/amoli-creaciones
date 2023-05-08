@@ -13,10 +13,9 @@ const ANavBar = () => {
         <Navbar
           key={expand}
           expand={expand}
-          className='mb-3 navbar'
-          id="home">
+          className='mb-3 navbar'>
           <Container fluid>
-            <Link to="#home">
+            <Link to='/'>
               <img
                 src={process.env.PUBLIC_URL + '/assets/images/full-logo.png'}
                 alt='Logo'
@@ -29,7 +28,8 @@ const ANavBar = () => {
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement='start'>
+              placement='start'
+              scroll={false}>
               <Offcanvas.Header
                 closeButton
                 closeVariant='white'>
@@ -39,10 +39,26 @@ const ANavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className='justify-content-end flex-grow-1 pe-3'>
-                  <Nav.Link href='#home'>Inicio</Nav.Link>
-                  <Nav.Link href='#'>Productos</Nav.Link>
-                  <Nav.Link href='#who-are-we'>¿Quiénes somos?</Nav.Link>
-                  <Nav.Link href='#faq'>Preguntas frecuentes</Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to='/home'>
+                    Inicio
+                  </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to='/products'>
+                    Productos
+                  </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to='/home/who-are-we'>
+                    ¿Quiénes somos?
+                  </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to='/home/faq'>
+                    Preguntas frecuentes
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
