@@ -85,30 +85,12 @@
       }
     }
   }
-
-  .faq__waves {
-    width: 100%;
-    height: 30%;
-    max-height: 150px;
-    margin: 0;
-    object-fit: cover;
-    object-position: bottom;
-  }
-
-  .faq__waves-2 {
-    display: none;
-  }
 }
 
 /*===== ESTILOS TABLET - MD =====*/
 @media only screen and (min-width: 768px) {
   .faq .faq__body {
     width: 80%;
-  }
-
-  .faq .faq__waves {
-    height: 30%;
-    max-height: 200px;
   }
 }
 
@@ -127,15 +109,6 @@
       align-self: flex-end;
     }
   }
-
-  .faq .faq__waves-1 {
-    display: none;
-  }
-
-  .faq .faq__waves-2 {
-    display: block;
-    max-height: 150px;
-  }
 }
 
 /*===== ESTILOS XL =====*/
@@ -148,12 +121,5 @@
     section {
       width: 60%;
     }
-  }
-}
-
-/*===== ESTILOS XL =====*/
-@media only screen and (min-width: 1400px) {
-  .faq .faq__waves-2 {
-    max-height: 200px;
   }
 }

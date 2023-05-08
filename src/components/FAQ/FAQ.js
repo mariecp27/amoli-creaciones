@@ -85,12 +85,12 @@ const FAQ = () => {
       <img
         src={process.env.PUBLIC_URL + '/assets/images/footer_1.svg'}
         alt='Waves'
-        className='faq__waves faq__waves-1'
+        className='footer-waves footer-waves-1'
       />
       <img
         src={process.env.PUBLIC_URL + '/assets/images/footer_2.svg'}
         alt='Waves'
-        className='faq__waves faq__waves-2'
+        className='footer-waves footer-waves-2'
       />
     </div>
   )
