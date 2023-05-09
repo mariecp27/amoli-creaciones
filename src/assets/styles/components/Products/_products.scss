@@ -1,0 +1,70 @@
+.products{
+display: grid;
+grid-template-columns: 1fr 1fr;
+row-gap: 50px;
+margin: 10px;
+.card {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card__body {
+    height: 150px;
+    padding: 20px;
+    position: relative;
+
+    .card__title {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
+      color: $a-purple;
+    }
+
+    .card__description {
+      display: block;
+      margin: 0 0 20px;
+      color: #555;
+      opacity: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: pre-line;
+      line-height: 1.7;
+      max-height: 50px;
+    }
+  }
+
+  // Mostramos la descripción al hacer hover en la card
+
+
+  .card__price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $a-green;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+
+  // Media queries para hacer la card responsive
+  @media screen and (min-width: 768px) {
+    .products{
+grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    max-width: 500px;
+
+    img {
+      height: 300px;
+    }
+  }
+}
+}
