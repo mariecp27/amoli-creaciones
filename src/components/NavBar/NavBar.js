@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Offcanvas from 'react-bootstrap/Offcanvas'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -14,9 +14,9 @@ const ANavBar = () => {
           key={expand}
           expand={expand}
           className='mb-3 navbar'
-          id="home">
+          id='home'>
           <Container fluid>
-            <Link to="#home">
+            <Link to='/'>
               <img
                 src={process.env.PUBLIC_URL + '/assets/images/full-logo.png'}
                 alt='Logo'
@@ -39,16 +39,35 @@ const ANavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className='justify-content-end flex-grow-1 pe-3'>
-                  <Nav.Link href='#home'>Inicio</Nav.Link>
-                  <Nav.Link href='#'>Productos</Nav.Link>
-                  <Nav.Link href='#who-are-we'>¿Quiénes somos?</Nav.Link>
-                  <Nav.Link href='#faq'>Preguntas frecuentes</Nav.Link>
+                  <Link to='/'>Inicio</Link>
+                  <Link to='/products'>Productos</Link>
+                  <Link
+                    to='/#who-are-we'
+                    onClick={() => {
+                      const element = document.getElementById('who-are-we')
+                      if (element) {
+                        element.scrollIntoView()
+                      }
+                    }}>
+                    ¿Quiénes somos?
+                  </Link>
+                  <Link
+                    to='/#faq'
+                    onClick={() => {
+                      const element = document.getElementById('faq')
+                      if (element) {
+                        element.scrollIntoView()
+                      }
+                    }}>
+                    Preguntas frecuentes
+                  </Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
       ))}
+      <Outlet />
     </div>
   )
 }
