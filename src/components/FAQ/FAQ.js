@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -82,16 +81,6 @@ const FAQ = () => {
           </div>
         </section>
       </div>
-      <img
-        src={process.env.PUBLIC_URL + '/assets/images/footer_1.svg'}
-        alt='Waves'
-        className='footer-waves footer-waves-1'
-      />
-      <img
-        src={process.env.PUBLIC_URL + '/assets/images/footer_2.svg'}
-        alt='Waves'
-        className='footer-waves footer-waves-2'
-      />
     </div>
   )
 }

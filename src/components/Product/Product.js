@@ -23,7 +23,7 @@ const Product = ({ id, image, name, price }) => {
       <h3 className=''>{name}</h3>
       <strong>{formatterPeso(price)}</strong>
       <Link
-        to=''
+        to={`/products/${id}`}
         className='a-button'>
         Ver detalle
       </Link>

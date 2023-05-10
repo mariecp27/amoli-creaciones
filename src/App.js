@@ -9,6 +9,7 @@ import Description from './components/Description/Description'
 import Who from './components/Who/Who'
 import FAQ from './components/FAQ/FAQ'
 import ProductListContainer from './components/ProductListContainer/ProductListContainer'
+import ProductDetailContainer from './components/ProductDetailContainer/ProductDetailContainer'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -67,6 +68,10 @@ function App() {
         <Route
           path='/products'
           element={<ProductListContainer />}
+        />
+        <Route
+          path='/products/:productId'
+          element={<ProductDetailContainer />}
         />
       </Routes>
 

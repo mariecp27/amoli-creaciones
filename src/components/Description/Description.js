@@ -1,8 +1,7 @@
-import React from 'react'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { Link } from 'react-router-dom'
 
 const Description = () => {
   useEffect(() => {
@@ -25,7 +24,11 @@ const Description = () => {
           libero. Nunc tempor lectus et vestibulum porta. Ut in elit rutrum,
           tristique risus vel, ultrices sem.
         </p>
-        <Link className='a-button'>Nuestros productos</Link>
+        <Link
+          to='/products'
+          className='a-button'>
+          Nuestros productos
+        </Link>
       </div>
     </div>
   )

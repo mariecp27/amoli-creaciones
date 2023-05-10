@@ -4,7 +4,7 @@ function Spinner() {
   return (
     <div className='spinner'>
       <DotLoader
-        color='#6095e8'
+        color='#e0b872'
         size={100}
       />
     </div>

@@ -24,11 +24,6 @@ const ProductList = ({ products }) => {
             className='product-list__form'
           />
         </div>
-        <img
-          src={process.env.PUBLIC_URL + '/assets/images/background.svg'}
-          alt='Waves'
-          className='banner-waves'
-        />
       </div>
       <div className='container-fluid product-list__products p-0'>
         <section className='row row-cols-lg-5 justify-content-center m-0'>
@@ -39,16 +34,13 @@ const ProductList = ({ products }) => {
             />
           ))}
         </section>
-        <img
-          src={process.env.PUBLIC_URL + '/assets/images/footer_1.svg'}
-          alt='Waves'
-          className='footer-waves footer-waves-1'
-        />
-        <img
-          src={process.env.PUBLIC_URL + '/assets/images/footer_2.svg'}
-          alt='Waves'
-          className='footer-waves footer-waves-2'
-        />
+        <a
+          href='https://wa.me/c/5493517461354'
+          target='_blank'
+          rel='noreferrer'
+          className='a-button'>
+          Ver todos los productos
+        </a>
       </div>
     </div>
   )

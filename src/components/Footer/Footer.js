@@ -1,10 +1,21 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
   return (
     <div className='footer'>
+      <div>
+        <img
+          src={process.env.PUBLIC_URL + '/assets/images/footer_1.svg'}
+          alt='Waves'
+          className='footer__waves footer__waves-1'
+        />
+        <img
+          src={process.env.PUBLIC_URL + '/assets/images/footer_2.svg'}
+          alt='Waves'
+          className='footer__waves footer__waves-2'
+        />
+      </div>
       <section className='footer__first-section'>
         <article>
           <h3>Comunícate con nosotros</h3>
