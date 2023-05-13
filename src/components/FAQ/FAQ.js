@@ -30,7 +30,7 @@ const FAQ = () => {
         <section
           className='faq__location'
           data-aos='fade-up'>
-          <h4>¿Dónde estámos?</h4>
+          <h4>¿Dónde estamos?</h4>
           <div>
             <div className='faq_icon'>
               <FontAwesomeIcon icon={faLocationDot} />

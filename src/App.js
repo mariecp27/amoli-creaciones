@@ -11,6 +11,7 @@ import FAQ from './components/FAQ/FAQ'
 import ProductListContainer from './components/ProductListContainer/ProductListContainer'
 import ProductDetailContainer from './components/ProductDetailContainer/ProductDetailContainer'
 import Footer from './components/Footer/Footer'
+import NoFound from './components/NoFound/NoFound'
 
 function App() {
   const location = useLocation()
@@ -80,6 +81,7 @@ function App() {
           path='/products/:productId'
           element={<ProductDetailContainer />}
         />
+        <Route path='*' element={<NoFound />}/>
       </Routes>
 
       <Footer />

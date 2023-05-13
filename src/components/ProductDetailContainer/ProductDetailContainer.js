@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../firebase/config.js'
-import ProductDetail from '../ProductDetail/ProductDetail.js'
+import ProductDetail from '../ProductDetail/ProductDetail'
 import Spinner from '../Spinner/Spinner'
+import NoFound from '../NoFound/NoFound'
 
 const ProductDetailContainer = () => {
   const [product, setProduct] = useState(null)
@@ -31,7 +32,17 @@ const ProductDetailContainer = () => {
       })
   }, [productId])
 
-  return <div>{loading ? <Spinner /> : <ProductDetail {...product} />}</div>
+  return (
+    <div>
+      {loading ? (
+        <Spinner />
+      ) : product.name ? (
+        <ProductDetail {...product} />
+      ) : (
+        <NoFound />
+      )}
+    </div>
+  )
 }
 
 export default ProductDetailContainer
