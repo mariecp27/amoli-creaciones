@@ -20,7 +20,7 @@ function App() {
   const whoAreWe = useRef(null)
   const faq = useRef(null)
 
-  useEffect(() => {
+  const handleSectionChange = (section) => {
     if (section === 'home') {
       home.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } else if (section === 'who-are-we') {
@@ -28,12 +28,19 @@ function App() {
     } else if (section === 'faq') {
       faq.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
+  }
+
+  useEffect(() => {
+    handleSectionChange(section)
   }, [section])
 
   return (
     <div>
       <WhatsApp />
-      <NavBar />
+      <NavBar
+        handleSectionChange={handleSectionChange}
+        section={section}
+      />
 
       <Routes>
         <Route

@@ -4,10 +4,11 @@
   font-size: 1.3rem;
   position: relative;
   z-index: 1;
+  transition: background-color 0.5s ease-in;
 
   .navbar__logo {
     width: 40vw;
-    margin: 10px;
+    margin: 2px 10px;
     @include a-transition;
 
     &:hover {
@@ -40,6 +41,10 @@
       outline: none;
       box-shadow: none;
     }
+  }
+
+  &.navbar-bg {
+    background-color: $a-blue;
   }
 }
 
@@ -91,11 +96,15 @@
 /*===== ESTILOS LG =====*/
 @media only screen and (min-width: 992px) {
   .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
     .navbar__logo {
       width: 15vw;
     }
   }
-
+  
   .offcanvas-start {
     padding: 0;
 
@@ -112,6 +121,10 @@
         }
       }
     }
+  }
+
+  .navbar-bg .offcanvas-body a {
+    color: #ffffffff;
   }
 }
 

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,14 +7,31 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 
-const ANavBar = () => {
+const ANavBar = ({ handleSectionChange, section }) => {
+  const [color, setColor] = useState(false)
+
+  const changeColor = () => {
+    if (window.scrollY >= 96) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeColor)
+    return () => {
+      window.removeEventListener('scroll', changeColor)
+    }
+  }, [])
+
   return (
     <div>
       {['lg'].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
-          className='mb-3 navbar'>
+          className={`mb-3 navbar ${color ? 'navbar-bg' : ''}`}>
           <Container fluid>
             <Link to='/'>
               <img
@@ -28,8 +46,7 @@ const ANavBar = () => {
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement='start'
-              scroll={false}>
+              placement='start'>
               <Offcanvas.Header
                 closeButton
                 closeVariant='white'>
@@ -40,21 +57,25 @@ const ANavBar = () => {
               <Offcanvas.Body>
                 <Nav className='justify-content-end flex-grow-1 pe-3'>
                   <Nav.Link
+                    onClick={() => handleSectionChange(section)}
                     as={Link}
                     to='/home'>
                     Inicio
                   </Nav.Link>
                   <Nav.Link
+                    onClick={() => handleSectionChange(section)}
                     as={Link}
                     to='/products'>
                     Productos
                   </Nav.Link>
                   <Nav.Link
+                    onClick={() => handleSectionChange(section)}
                     as={Link}
                     to='/home/who-are-we'>
                     ¿Quiénes somos?
                   </Nav.Link>
                   <Nav.Link
+                    onClick={() => handleSectionChange(section)}
                     as={Link}
                     to='/home/faq'>
                     Preguntas frecuentes
