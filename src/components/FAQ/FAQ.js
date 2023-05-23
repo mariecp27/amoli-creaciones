@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -6,13 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLocationDot,
   faCartShopping,
-  faDollar
+  faDollar,
+  faClock
 } from '@fortawesome/free-solid-svg-icons'
-import {
-  faCcMastercard,
-  faCcVisa,
-  faCcAmex
-} from '@fortawesome/free-brands-svg-icons'
 
 const FAQ = () => {
   useEffect(() => {
@@ -31,16 +26,16 @@ const FAQ = () => {
         <section
           className='faq__location'
           data-aos='fade-up'>
-          <h4>¿Dónde estámos?</h4>
+          <h4>¿Dónde estamos?</h4>
           <div>
             <div className='faq_icon'>
               <FontAwesomeIcon icon={faLocationDot} />
             </div>
             <p className='m-0'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel
-              augue ut mi tempus porttitor commodo vel sapien. Quisque at
-              pharetra nunc. In fermentum convallis malesuada. Nulla massa
-              neque, egestas sed velit in, hendrerit consectetur odio.
+              ¡Estamos ubicados en Córdoba, Argentina, y tenemos envíos a todo
+              el país a través del correo argentino! Además, si te encuentras en
+              Ciudad de Córdoba, podremos coordinar la fecha de entrega en tu
+              casa, con un envío completamente gratis.
             </p>
           </div>
         </section>
@@ -52,12 +47,51 @@ const FAQ = () => {
             <div className='faq_icon'>
               <FontAwesomeIcon icon={faCartShopping} />
             </div>
-            <p className='m-0'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel
-              augue ut mi tempus porttitor commodo vel sapien. Quisque at
-              pharetra nunc. In fermentum convallis malesuada. Nulla massa
-              neque, egestas sed velit in, hendrerit consectetur odio.
-            </p>
+            <div className='m-0 faq__how-to-purchase-content'>
+              <p>
+                Nuestro proceso de compra se realiza a través de WhatsApp. Si
+                bien siempre puedes escribirnos para preguntar respecto a
+                cualquier producto; también puedes realizar el proceso de compra
+                de esta forma:
+              </p>
+              <ol>
+                <li>Ingresa a nuestro catálogo</li>
+                <li>
+                  Selecciona la categoría en la que estás interesado, o bien,
+                  puedes ver todos los productos
+                </li>
+                <li>Selecciona el producto o productos que más te gusten</li>
+                <li>Selecciona la opción “Añadir al carrito”</li>
+                <li>
+                  Una vez tu carrito esté listo, selecciona “Enviar a la
+                  empresa”, de esta forma nos pondremos en contacto contigo
+                </li>
+              </ol>
+              <h4>Envío/retiro</h4>
+              <ul>
+                <li>
+                  Si seleccionaste retirar personalmente, nos comunicaremos
+                  contigo para coordinar la entrega o puedes escribirnos a
+                  nuestro WhatsApp
+                </li>
+                <li>
+                  Si elegiste envío a domicilio, te contactaremos antes de
+                  enviar tu pedido para asegurarnos que estés para recibirlo
+                </li>
+                <li>
+                  Envío por correo al resto del país: Te enviaremos el número de
+                  seguimiento cuando tu pedido sea despachado
+                </li>
+              </ul>
+              <strong>
+                En caso de perdida, extravío, robo, rotura o cualquier otro
+                inconveniente ocasionado por la empresa de transporte, no somos
+                responsables por el reintegro del dinero o devolución del
+                producto, ya que excede nuestros límites y responsabilidades,
+                quien deberá hacerse cargo es la empresa de transporte
+                correspondiente.
+              </strong>
+            </div>
           </div>
         </section>
         <section
@@ -68,30 +102,36 @@ const FAQ = () => {
             <div className='faq_icon'>
               <FontAwesomeIcon icon={faDollar} />
             </div>
-            <p className='m-0'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel
-              augue ut mi tempus porttitor commodo vel sapien. Quisque at
-              pharetra nunc. In fermentum convallis malesuada. Nulla massa
-              neque, egestas sed velit in, hendrerit consectetur odio.
-            </p>
-            <div className='faq_purchase-methods-icons'>
-              <FontAwesomeIcon icon={faCcMastercard} />
-              <FontAwesomeIcon icon={faCcVisa} />
-              <FontAwesomeIcon icon={faCcAmex} />
+            <div className='m-0 faq__purchase-methods-content'>
+              <p>Tenemos tres opciones:</p>
+              <ol>
+                <li>Transferencia bancaria</li>
+                <li>Pago fácil o Rapipago</li>
+                <li>
+                  Mercado Pago (se redirigirá a Mercado Pago para realizar la
+                  compra, puedes seleccionar las cuotas)
+                </li>
+              </ol>
             </div>
           </div>
         </section>
+        <section
+          className='faq__time'
+          data-aos='fade-up'>
+          <h4>¿Cuánto demora la entrega?</h4>
+          <div>
+            <div className='faq_icon'>
+              <FontAwesomeIcon icon={faClock} />
+            </div>
+            <p className='m-0'>
+              Como le ponemos mucho amor a nuestros productos y trabajamos de
+              manera artesanal, los pedidos tienen una demora de siete (7) días
+              hábiles aproximadamente. Si el producto está en stock, ese mismo
+              día nos ponemos en contacto contigo para coordinar el envío.
+            </p>
+          </div>
+        </section>
       </div>
-      <img
-        src={process.env.PUBLIC_URL + '/assets/images/footer_1.svg'}
-        alt='Waves'
-        className='faq__waves faq__waves-1'
-      />
-      <img
-        src={process.env.PUBLIC_URL + '/assets/images/footer_2.svg'}
-        alt='Waves'
-        className='faq__waves faq__waves-2'
-      />
     </div>
   )
 }

@@ -1,8 +1,7 @@
-import React from 'react'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { Link } from 'react-router-dom'
 
 const Description = () => {
   useEffect(() => {
@@ -16,16 +15,20 @@ const Description = () => {
     <div className='description'>
       <div data-aos='fade-up'>
         <p className='description__body'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue
-          ligula et ante fermentum vehicula. Sed elementum, est id ullamcorper
-          efficitur, turpis augue sodales lorem, et sollicitudin mauris augue ut
-          erat. Pellentesque et elit ligula. Donec elementum rutrum enim id
-          gravida. In quis consectetur sapien. Proin quis urna non odio mollis
-          pharetra et a urna. In laoreet molestie consequat. Nunc quis aliquam
-          libero. Nunc tempor lectus et vestibulum porta. Ut in elit rutrum,
-          tristique risus vel, ultrices sem.
+          <strong><em>¡Montessori se siente!</em></strong>
+          <br /> 
+          <br /> 
+          No solo se siente a través de sus hermosos materiales manipulativos;
+          Montessori se siente dentro y deja una huella tanto en los niños como
+          en los papás que han tenido la fortuna de conocer un método tan
+          respetuoso con los niños como profundamente motivador, un increíble
+          despertar a la curiosidad y el aprendizaje.
         </p>
-        <Link className='a-button'>Nuestros productos</Link>
+        <Link
+          to='/products'
+          className='a-button'>
+          Nuestros productos
+        </Link>
       </div>
     </div>
   )

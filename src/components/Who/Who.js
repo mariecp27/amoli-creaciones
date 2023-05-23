@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -20,15 +19,21 @@ const Who = () => {
         data-aos='fade-up'>
         <h3>¿Quiénes somos?</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue
-          ligula et ante fermentum vehicula. Sed elementum, est id ullamcorper
-          efficitur, turpis augue sodales lorem, et sollicitudin mauris augue ut
-          erat. Pellentesque et elit ligula. Donec elementum rutrum enim id
-          gravida. In quis consectetur sapien. Proin quis urna non odio mollis
-          pharetra et a urna. In laoreet molestie consequat. Nunc quis aliquam
-          libero. Nunc tempor lectus et vestibulum porta. Ut in elit rutrum,
-          tristique risus vel, ultrices sem.
+          Amoli Creaciones es un emprendimiento familiar que nace de la mano de
+          Eliana y Nicolas.
+          <br />
+          ¿Por qué juguetes educativos?
+          <br />
+          Gracias a nuestro hijo, Oliver, y su discapacidad, nos llevó aprender
+          y conocer nuevas metodologías. Con él descubrimos todo un mundo de
+          juegos y materiales asombrosos. Con la llegada de nuestra hija, Amara,
+          quisimos emprender nuestro propio universo de juguetes bonitos, de
+          carácter educativo y acordes a nuestros valores.
+          <br />
+          En estas páginas puedes ver ese pequeño mundo que hemos creado.
+          <br />
         </p>
+          <strong><em>¡Ojalá lo disfrutes tanto como nosotros!</em></strong>
       </div>
     </div>
   )
