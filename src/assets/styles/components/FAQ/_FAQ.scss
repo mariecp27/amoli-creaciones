@@ -59,9 +59,25 @@
       }
     }
 
-    .faq__how-to-purchase {
+    .faq__how-to-purchase,
+    .faq__time {
       h4 {
         text-align: right;
+      }
+
+      &-content {
+        padding: 0;
+        border: none;
+
+        h4 {
+          text-align: left;
+          margin-top: 20px;
+        }
+
+        strong {
+          display: block;
+          margin-top: 20px;
+        }
       }
 
       div .faq_icon {
@@ -72,16 +88,9 @@
     }
 
     .faq__purchase-methods {
-      .faq_purchase-methods-icons {
-        border: none;
-        text-align: center;
+      &-content {
         padding: 0;
-
-        svg {
-          margin: 5px 10px 0 10px;
-          font-size: 3rem;
-          color: $a-yellow;
-        }
+        border: none;
       }
     }
   }
@@ -105,7 +114,8 @@
       width: 50%;
     }
 
-    .faq__how-to-purchase {
+    .faq__how-to-purchase,
+    .faq__time {
       align-self: flex-end;
     }
   }

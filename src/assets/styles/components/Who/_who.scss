@@ -27,10 +27,11 @@
       width: 100%;
     }
 
-    p {
-      position: relative;
-      z-index: 1;
+    em {
+      display: block;
+      text-align: center;
     }
+
   }
 }
 
