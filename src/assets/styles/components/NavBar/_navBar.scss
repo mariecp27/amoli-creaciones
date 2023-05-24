@@ -55,14 +55,18 @@
   font-size: 2rem;
   font-family: $a-text;
 
-  .btn-close-white {
-    opacity: 1;
-    font-size: 2rem;
-  }
-
   .offcanvas-title {
     font-size: 3rem;
     font-family: $a-title;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    button {
+      background: none;
+      border: none;
+      color: #ffffffff;
+    }
   }
 
   .offcanvas-body a {
