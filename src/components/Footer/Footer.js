@@ -27,7 +27,7 @@ const Footer = () => {
             <strong>Teléfono:</strong> +54 9 3517 46-1354
           </p>
           <p>
-            <strong>Correo:</strong> eliigoku34@gmail.com
+            <strong>Correo:</strong> amolicreaciones2023@gmail.com
           </p>
         </article>
         <article>
